@@ -10,6 +10,9 @@
 </head>
 
 <body>
+<div class="reset"></div>
+<div class="reset"></div>
+<div class="reset"></div>
 
     <?php require_once __DIR__ . '\..\components\navbar.php'; ?>
 
