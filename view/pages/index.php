@@ -7,12 +7,11 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="/../site-adm-grid/view/assets/css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
 </head>
 
 <body>
-<div class="reset"></div>
-<div class="reset"></div>
-<div class="reset"></div>
 
     <?php require_once __DIR__ . '\..\components\navbar.php'; ?>
 
