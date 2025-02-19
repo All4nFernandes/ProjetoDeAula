@@ -170,31 +170,44 @@ $usuarios = [
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>usuarios</title>
+    <link rel="stylesheet" href="/site-adm-grid/view/assets/css/style.css">
 </head>
 
 <body>
+
+    <?php include_once __DIR__ . "/../components/sidebar.php"; ?>
 
     <main>
         <table class="table">
             <thead>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>Ano</th>
-                <th>Descrição</th>
-                <th>Ações</th>
+                <th>Email</th>
+                <th>Senha</th>
+                <th>Telefone</th>
+                <th>Data Nascimento</th>
+                <th>Cpf</th>
+                <th>Genero</th>
+                <th>Foto Perfil</th>
             </thead>
             <tbody>
                 <?php foreach ($usuarios as $usuario) { ?>
                     <tr>
                         <td><?php echo $usuario['id'] ?></td>
                         <td><?php echo $usuario['nome'] ?></td>
-                        <td><?php echo $usuario['descricao'] ?></td>
+                        <td><?php echo $usuario['email'] ?></td>
+                        <td><?php echo $usuario['senha'] ?></td>
+                        <td><?php echo $usuario['telefone'] ?></td>
+                        <td><?php echo $usuario['data_nascimento'] ?></td>
+                        <td><?php echo $usuario['cpf'] ?></td>
+                        <td><?php echo $usuario['genero'] ?></td>
+                        <td><?php echo $usuario['foto_perfil'] ?></td>
                         <td>
                             <!-- METHODS - Get / Post -->
                             <form action="visualizar.php" method="GET">

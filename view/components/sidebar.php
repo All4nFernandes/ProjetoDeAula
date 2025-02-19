@@ -1,43 +1,56 @@
-<link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<aside>
-    Sidebar
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sidebar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
 
-    <!-- botao para fechar e abrir a sidebar -->
-    <button class="voltar">
-        <span class="material-symbols-outlined">
-            chevron_left
-        </span>
-    </button>
+<body>
+    <main>
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                Sidebar
 
-    <nav>
-        <ul class=>
-            <li class="link">
-                <span class="material-symbols-outlined">
-                    home
-                </span>
-                <a href="/../site-adm-grid/view/pages/index.php">Home</a>
-            </li>
-            <li class="link">
-                <span class="material-symbols-outlined">
-                    category
-                </span>
-                <a href="/../site-adm-grid/view/pages/categorias.php">Categorias</a>
-            </li>
-            <li class="link">
-                <span class="material-symbols-outlined">
-                    inventory_2
-                </span>
-                <a href="/../site-adm-grid/view/pages/produtos.php">Produtos</a>
-            </li>
-            <li class="link">
-                <span class="material-symbols-outlined">
-                    person
-                </span>
-                <a href="/../site-adm-grid/view/pages/usuarios.php">Usuarios</a>
-            </li>
-        </ul>
-    </nav>
+                <!-- botao para fechar e abrir a sidebar -->
+                <button class="voltar">
+                    <span class="material-symbols-outlined"> chevron_left </span>
+                </button>
+            </header>
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/../site-adm-grid/view/pages/index.php">
+                            <span class="material-symbols-outlined"> home </span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/../site-adm-grid/view/pages/categorias.php">
+                            <span class="material-symbols-outlined"> category </span>
+                            Categoria
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/../site-adm-grid/view/pages/produtos.php">
+                            <span class="material-symbols-outlined"> inventory_2 </span>
+                            Produtos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/../site-adm-grid/view/pages/usuarios.php">
+                            <span class="material-symbols-outlined"> person </span>
+                            Usuarios
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+</body>
 
-</aside>
+</html>

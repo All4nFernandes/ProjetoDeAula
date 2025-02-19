@@ -1,4 +1,3 @@
-<header>
-        Navbar
-    </header>
-    
+<header class="navbar-header">
+    Navbar
+</header>
