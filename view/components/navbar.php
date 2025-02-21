@@ -1,3 +1,18 @@
 <header class="navbar-header">
-    Navbar
+    <nav>
+        <ul>
+            <li>
+                <!-- codigo -->
+            </li>
+            <li>
+                <!-- codigo -->
+            </li>
+            <li>
+                <!-- codigo -->
+            </li>
+            <li>
+                <!-- codigo -->
+            </li>
+        </ul>
+    </nav>
 </header>

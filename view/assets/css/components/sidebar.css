@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   min-height: 100vh;
   background: linear-gradient(#f1faff, #cbe4ff);
@@ -12,16 +19,20 @@ body {
 
 aside {
   grid-column: 1;
-  grid-row: 1 / 4;
+  grid-row: 1/ 4;
 }
 
 .sidebar {
-  width: 225px;
-  margin: 3px;
-  position: fixed;
+  width: 100%;
+  position: sticky;
   background: #151a2d;
-  border-radius: 16px;
-  height: calc(100vh - 9px);
+  /* border-radius: 16px; */
+  height: calc(100vh - 1px);
+  transition: 0.5s ease;
+}
+
+.sidebar.collapsed {
+  width: 85px;
 }
 
 .sidebar-header {
@@ -29,6 +40,13 @@ aside {
   align-items: center;
   justify-content: space-between;
   padding: 25px 20px;
+}
+
+.sidebar-header .logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .sidebar-nav .nav-link {
@@ -43,9 +61,16 @@ aside {
   gap: 7px;
   padding: 0px 10px;
   transform: translateY(15px);
+  transition: 0.5s ease;
+}
+
+.sidebar.collapsed .sidebar-nav {
+  transform: translateY(65px);
 }
 
 .sidebar-header .voltar {
+  position: absolute;
+  right: 20px;
   width: 35px;
   height: 35px;
   cursor: pointer;
@@ -56,8 +81,21 @@ aside {
   color: black;
   border-radius: 15px;
   background-color: #fff;
-  transition: 0.4 ease;
+  transition: 0.5 ease;
 }
+
+.sidebar-header .voltar span {
+  transition: 0.5s ease;
+}
+
+.sidebar.collapsed .sidebar-header .voltar span {
+  transform: rotate(180deg);
+}
+
+.sidebar.collapsed .sidebar-header .voltar {
+  transform: translate(-4px, 65px);
+}
+
 .sidebar-header .voltar:hover {
   background-color: #dde4fb;
 }
@@ -82,29 +120,17 @@ aside {
   background-color: #fff;
 }
 
-/* nav a {
-  text-decoration: none;
-  color: gray;
-  text-align: center;
-} */
-
-/* a {
-  padding: 0px 50px 45px 25px;
-} */
-
-/* nav .link:hover {
-  color: #151a2d;
-  background-color: #fff; 
+.sidebar-nav .nav-link .nav-label {
+  transition: opacity 0.5s ease;
 }
-/* @media screen and (max-width: 490px) {
-    aside {
-      visibility: hidden;
-  
-      button {
-        visibility: visible;
-        /* position: fixed;
-              left: 10px;
-              top: 13px; 
-      }
-    }
-  } */
+
+.sidebar.collapsed .sidebar-nav .nav-link .nav-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 490px) {
+  .sidebar.collapsed {
+    display: block;
+  }
+}
