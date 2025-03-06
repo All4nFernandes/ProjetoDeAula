@@ -181,6 +181,8 @@ $usuarios = [
 
 <body>
 
+    <?php require_once __DIR__ . '\..\components\navbar.php'; ?>
+
     <?php include_once __DIR__ . "/../components/sidebar.php"; ?>
 
     <main>

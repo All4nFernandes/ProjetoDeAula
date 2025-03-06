@@ -1,11 +1,42 @@
 .navbar-header {
   width: calc(100vw - 200px);
   height: 68px;
-  background: linear-gradient();
+  background-color: purple;
   /* position: fixed;
     right: 0; */
   grid-column: 2;
   grid-row: 1;
+}
+
+nav {
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar-ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  position: top 100px;
+}
+
+.nav-item {
+  text-align: center;
+  margin-top: 15px;
+  padding: 16px 40px;
+  /* padding-block: 16px; */
+}
+
+.links-navbar {
+  color: white;
+  text-decoration: none;
+}
+
+.links-navbar.active {
+  color: white;
+  text-decoration: underline #fff;
 }
 
 @media screen and (max-width: 490px) {
