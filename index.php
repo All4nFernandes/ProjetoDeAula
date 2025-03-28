@@ -13,9 +13,9 @@
 
 <body>
 
-    <?php require_once __DIR__ . '\..\components\navbar.php'; ?>
+    <?php require_once __DIR__ . '/view/components/navbar.php'; ?>
 
-    <?php require_once __DIR__ . '\..\components\sidebar.php'; ?>
+    <?php require_once __DIR__ . '/view/components/sidebar.php'; ?>
 
 
     <main>
@@ -150,7 +150,7 @@
 
     </main>
 
-    <?php require_once __DIR__ . '\..\components\footer.php'; ?>
+    <?php require_once __DIR__ . '/view/components/footer.php'; ?>
 
 </body>
 

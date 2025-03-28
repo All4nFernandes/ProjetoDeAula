@@ -23,21 +23,21 @@
         <nav class="sidebar-nav">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a class="nav-link" href="/../site-adm-grid/view/pages/index.php">
+                    <a class="nav-link" href="/../site-adm-grid/index.php">
                         <span class="nav-icone material-symbols-outlined"> home </span>
                         <span class="nav-label">Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../site-adm-grid/view/pages/categorias.php">
+                    <a class="nav-link" href="/../site-adm-grid/view/pages/categoria.php">
                         <span class="nav-icone material-symbols-outlined"> category </span>
                         <span class="nav-label">Categoria</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/../site-adm-grid/view/pages/produtos.php">
-                        <span class="nav-icone material-symbols-outlined"> inventory_2 </span>
-                        <span class="nav-label">Produtos</span>
+                        <span class="nav-icone material-symbols-outlined"> news </span>
+                        <span class="nav-label">Artigos</span>
                     </a>
                 </li>
                 <li class="nav-item">
