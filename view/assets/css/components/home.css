@@ -1,0 +1,20 @@
+.btn-login {
+  background-color: rgb(121, 188, 22);
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: rgb(121, 188, 22);
+  width: 125px;
+  height: 37px;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+}
+
+.link-login {
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  display: flex;
+}
