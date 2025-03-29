@@ -1,15 +1,28 @@
 .btn-login {
-  background-color: rgb(121, 188, 22);
+  background-color: rgb(183, 230, 16);
   border-radius: 10px;
   border: 1px solid;
-  border-color: rgb(121, 188, 22);
-  width: 125px;
-  height: 37px;
+  border-color: rgb(183, 230, 16);
+  color: black;
+  width: 155px;
+  height: 35px;
   align-items: center;
   text-align: center;
   font-size: 15px;
   display: flex;
+  position: relative;
+  left:85%;
+  top: 4px;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 17px;
+  gap: 10px;
 }
+
+.btn-login:hover{
+  cursor: pointer;
+}
+
 
 .link-login {
   text-align: center;
@@ -17,4 +30,21 @@
   text-decoration: none;
   color: black;
   display: flex;
+}
+
+.material-symbols-outlined.btn-icone{
+  font-size: 24px;
+}
+
+.container-p{
+  color: #13edff;
+  font-size: 15px;
+  border-radius: 30px;
+  border: 1px solid;
+  border-color:#13edff ;
+  text-align: center;
+  display: flex;
+  position: relative;
+  left: 40%;
+  width: 150px;
 }

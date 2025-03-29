@@ -13,7 +13,7 @@
 <body>
     <aside class="sidebar">
         <header class="sidebar-header">
-            <img class="logo" src="/../site-adm-grid/view/assets/img/logo.jpeg" alt="logo">
+            <img class="logo" src="/../site-adm-grid/view/assets/img/Devmedia.jpeg" alt="logo">
 
             <!-- botao para fechar e abrir a sidebar -->
             <button class="voltar sidebar-voltar">
