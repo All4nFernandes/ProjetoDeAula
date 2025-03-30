@@ -7,7 +7,7 @@ main {
     top: 68px; */
   overflow: auto;
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 @media screen and (max-width: 490px) {

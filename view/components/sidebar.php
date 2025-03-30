@@ -23,7 +23,7 @@
         <nav class="sidebar-nav">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a class="nav-link" href="/../site-adm-grid/index.php">
+                    <a class="nav-link" href="/../site-adm-grid/view/pages/home.php">
                         <span class="nav-icone material-symbols-outlined"> home </span>
                         <span class="nav-label">Home</span>
                     </a>
