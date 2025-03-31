@@ -5,8 +5,9 @@ require_once __DIR__ . "..\..\config\Database.php";
 class CategoriaModel
 {
 
-    private $conn;
+    protected $conn;
     private $tabela = "categoria";
+    
 
     public function __construct()
     {
@@ -35,6 +36,18 @@ class CategoriaModel
 
         return $stmt->fetchAll();
     }
+
+    public function login($username, $senha)
+    {
+        $query = "SELECT * FROM usuarios WHERE username = :username AND senha = :senha";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":username", $username);
+        $stmt->bindParam(":senha", $senha);
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    }
+
 
     public $categorias = [
         [

@@ -58,7 +58,7 @@
 }
 
 .box-login {
-  display: none;
+  /* display: none; */
   width: 190px;
   position: absolute;
   right: 40px;
