@@ -1,7 +1,9 @@
 <?php
-session_start(); // Inicia a sessão para armazenar o login
 include("../../config/Database.php");
 include("../../Model/LoginModel.php");
+session_start(); // Inicia a sessão para armazenar o login
+
+
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $usuario = $_POST["username"];

@@ -1,10 +1,7 @@
 main {
   width: calc(100vw - 200px);
   height: calc(100vh - 68px - 1px);
-  background-color: green;
-  /* position: fixed;
-    right: 0;
-    top: 68px; */
+  background-color: #FFFF;
   overflow: auto;
   grid-column: 2;
   grid-row: 1;

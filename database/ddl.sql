@@ -28,4 +28,6 @@ create table login(
     senha varchar(16) not null
 );
 
+insert into login(usuario,senha)values("admin","admin");
+
 

@@ -21,19 +21,12 @@ $lista = $categoriaModel->listar();
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<?php
+    require_once __DIR__ . '\..\components\head.php'
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="/../site-adm-grid/view/assets/css/style.css">
-</head>
 
 <body>
-    <?php require_once __DIR__ . '\..\components\navbar.php'; ?>
 
     <?php require_once __DIR__ . '\..\components\sidebar.php'; ?>
 
@@ -48,32 +41,32 @@ $lista = $categoriaModel->listar();
             <tbody>
                 <?php foreach ($lista as $item) { ?>
                 <tr>
-                    <td><?php echo $categoria['id'] ?></td>
-                    <td><?php echo $categoria['nome'] ?></td>
+                    <td><?php echo $item['id'] ?></td>
+                    <td><?php echo $item['nome'] ?></td>
                     <td>
                         <!-- METHODS - Get / Post -->
-                        <form action="visualizar.php" method="GET">
-                            <input type="hidden" name="id" value="<?php echo $categoria['id'] ?>">
-                            <button>
-                                <span class="material-symbols-outlined">
+                        <form class="reset-form" action="visualizar.php" method="GET">
+                            <input type="hidden" name="id" value="<?php echo $item['id'] ?>">
+                            <button class="btn-icon">
+                                <span class="material-symbols-outlined tabela">
                                     visibility
                                 </span>
                             </button>
                         </form>
 
-                        <form action="cadastro.php" method="GET">
+                        <form class="reset-form" action="cadastro.php" method="GET">
                             <input type="hidden" name="id" value="<?php echo $item['id'] ?>">
-                            <button>
-                                <span class="material-symbols-outlined">
+                            <button class="btn-icon">
+                                <span class="material-symbols-outlined tabela">
                                     edit
                                 </span>
                             </button>
                         </form>
 
-                        <form action="excluir.php" method="POST">
+                        <form class="reset-form" action="excluir.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $item['id'] ?>">
-                            <button onclick="return confirm('Tem certeza que deseja excluir o filme?')">
-                                <span class="material-symbols-outlined">
+                            <button class="btn-icon" onclick="return confirm('Tem certeza que deseja excluir o filme?')">
+                                <span class="material-symbols-outlined tabela">
                                     delete
                                 </span>
                             </button>
