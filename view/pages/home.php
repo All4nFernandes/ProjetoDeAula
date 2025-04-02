@@ -1,6 +1,6 @@
 <?php
-include("../../config/Database.php");
-include("../../Model/LoginModel.php");
+require_once __DIR__ . "..\..\..\config\Database.php";
+require_once __DIR__ . "..\..\..\Model\LoginModel.php";
 session_start(); // Inicia a sessão para armazenar o login
 
 
@@ -12,7 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sucesso = $acesso->login($usuario, $senha);
 
     if ($sucesso) {
-        echo "Login bem-sucedido!";
+        header("Location: home.php");
+        exit();
     } else {
         echo "Usuário ou senha incorretos.";
     }
@@ -21,23 +22,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 ?>
 
-<?php require_once __DIR__ . "/../components/head.php"; ?>
+
+<?php require_once __DIR__ . "../../components/head.php"; ?>
 
 <body>
-    <?php require_once __DIR__ . "/../components/sidebar.php"; ?>
-    <div class="link-login">
-        <button type="button" class="btn-login">
-            Login
-            <span class="material-symbols-outlined btn-icone">
-                person
-            </span>
-        </button>
-    </div>
+    <?php require_once __DIR__ . "../../components/sidebar.php"; ?>
+
 
     <main class="background">
+        <div>
+            <h1 class="title-h1">DevMedia</h1>
+        </div>
+        <div class="link-login">
+            <button type="button" class="btn-login">
+                Login
+                <span class="material-symbols-outlined btn-icone">
+                    person
+                </span>
+            </button>
+        </div>
         <form action="" method="POST">
             <section>
-                <div class="box-login show-form-login" id="loginPopup">
+                <div class="box-login" id="loginPopup">
                     <label class="label-form" for="username">Login</label>
                     <input class="form-input" type="text" name="username" placeholder="Usuário" required>
                     <label class="label-form" for="senha">Senha</label>
@@ -65,6 +71,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
             </div>
         </section>
+        <script src="/site-adm-grid\view\assets\js\popup-home.js"></script>
     </main>
-    <?php require_once __DIR__ . "/../components/footer.php"; ?>
 </body>
