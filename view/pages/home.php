@@ -1,8 +1,7 @@
 <?php
-require_once __DIR__ . "..\..\..\config\Database.php";
-require_once __DIR__ . "..\..\..\Model\LoginModel.php";
+require_once __DIR__ . "/../../config/Database.php";
+require_once __DIR__ . "/../../Model/LoginModel.php";
 session_start(); // Inicia a sessão para armazenar o login
-
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -12,14 +11,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $sucesso = $acesso->login($usuario, $senha);
 
     if ($sucesso) {
-        header("Location: home.php");
+        $_SESSION['usuario_logado'] = true;
+        header("Location: home.php?status=successo"); // Mensagem de sucesso
         exit();
     } else {
-        echo "Usuário ou senha incorretos.";
+        header("Location: home.php?status=erro"); // Mensagem de erro
+        exit();
     }
-    exit();
 }
-
 ?>
 
 
@@ -40,7 +39,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     person
                 </span>
             </button>
+            <button id="logout" class="logout-btn">Logout</button>
         </div>
+
         <form action="" method="POST">
             <section>
                 <div class="box-login" id="loginPopup">
@@ -71,6 +72,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
             </div>
         </section>
-        <script src="/site-adm-grid\view\assets\js\popup-home.js"></script>
+        <script src="/site-adm-grid\view\assets\js\home.js"></script>
     </main>
 </body>
