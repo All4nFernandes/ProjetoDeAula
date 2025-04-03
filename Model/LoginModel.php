@@ -13,8 +13,8 @@ class LoginModel
         $this->conn = $db->conectar();
     }
 
-    public function login($usuario, $senha)
-    {
+    public function login($usuario, $senha){
+    
         $query = "SELECT * FROM $this->tabela WHERE usuario = :usuario AND senha = :senha";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':usuario', $usuario);
@@ -24,5 +24,6 @@ class LoginModel
 
     }
 }
+
 
 ?>
