@@ -1,10 +1,59 @@
 main {
   width: calc(100vw - 200px);
   height: calc(100vh - 68px - 1px);
-  background-color: #FFFF;
+  background-color: #ffff;
   overflow: auto;
   grid-column: 2;
   grid-row: 1;
+}
+
+.title-h1-devmedia {
+  color: #c9f31d;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: underline;
+}
+
+.title-h1-devmedia.table-h1 {
+  position: relative;
+  left: 40%;
+  top: 10px;
+}
+
+.btn-padrao {
+  background-color: rgb(183, 230, 16);
+  border-radius: 10px;
+  border: 1px solid;
+  border-color: rgb(183, 230, 16);
+  color: black;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 17px;
+  gap: 5px;
+  width: 155px;
+  height: 35px;
+}
+
+.btn-padrao.btn-new {
+  position: relative;
+  left: 85%;
+  top: 40px;
+}
+
+.btn-padrao:hover {
+  cursor: pointer;
+  background-color: rgb(196, 245, 19);
+}
+
+.link-btn {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 490px) {

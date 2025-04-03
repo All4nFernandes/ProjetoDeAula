@@ -12,17 +12,10 @@
   flex-direction: column;
 }
 
-.title-h1 {
-  color: #c9f31d;
-  font-size: 40px;
-  font-weight: bold;
-  position: relative;
-  top: -50px;
-  padding: 0px;
-  margin: 0px;
+.btn-padrao.disable-btn-login {
+  display: none;
 }
-
-.btn-login {
+.logout-btn {
   background-color: rgb(183, 230, 16);
   border-radius: 10px;
   border: 1px solid;
@@ -40,25 +33,9 @@
   height: 35px;
 }
 
-.btn-login:hover {
+.logout-btn:hover {
   cursor: pointer;
   background-color: rgb(196, 245, 19);
-}
-
-.btn-login.disable-btn-login {
-  display: none;
-}
-.logout-btn {
-  background-color: #d9534f;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.logout-btn:hover {
-  background-color: #c9302c;
 }
 .link-login {
   text-align: center;

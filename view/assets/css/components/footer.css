@@ -1,14 +1,14 @@
 footer {
   /* width: calc(100vw - 200px); */
-  width: 100vw;
+  /* width: 100vw;
   height: 150px;
-  background-color: black;
+  background-color: black; */
   /* position: fixed;
     right: 0;
     bottom: 0; */
-  grid-column: 1;
+  /* grid-column: 1;
   grid-row: 3;
-  color: #ffff;
+  color: #ffff; */
 }
 
 @media screen and (max-width: 490px) {

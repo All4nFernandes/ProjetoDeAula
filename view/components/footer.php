@@ -1,4 +1,4 @@
-<footer>
+<!-- <footer>
     <ul>
         <li>
             <h1><strong>Menu</strong></h1>
@@ -13,4 +13,4 @@
             FAQ - Fale conosco
         </li>
     </ul>
-</footer>
+</footer> -->

@@ -1,48 +1,27 @@
 <?php
+session_start();
 require_once __DIR__ . "/../../config/Database.php";
 require_once __DIR__ . "/../../Model/LoginModel.php";
-session_start(); // Inicia a sessão para armazenar o login
+require_once __DIR__ . "../../components/head.php"; ?>
 
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $usuario = $_POST["username"];
-    $senha = $_POST["senha"];
-    $acesso = new LoginModel();
-    $sucesso = $acesso->login($usuario, $senha);
-
-    if ($sucesso) {
-        $_SESSION['usuario_logado'] = true;
-        header("Location: home.php?status=successo"); // Mensagem de sucesso
-        exit();
-    } else {
-        header("Location: home.php?status=erro"); // Mensagem de erro
-        exit();
-    }
-}
-?>
-
-
-<?php require_once __DIR__ . "../../components/head.php"; ?>
 
 <body>
     <?php require_once __DIR__ . "../../components/sidebar.php"; ?>
 
-
     <main class="background">
         <div>
-            <h1 class="title-h1">DevMedia</h1>
-        </div>
-        <div class="link-login">
-            <button type="button" class="btn-login">
-                Login
-                <span class="material-symbols-outlined btn-icone">
-                    person
-                </span>
-            </button>
-            <button id="logout" class="logout-btn">Logout</button>
+            <h1 class="title-h1-devmedia">DevMedia</h1>
         </div>
 
-        <form action="" method="POST">
+        <div class="link-login">
+            <?php if (!isset($_SESSION['usuario_logado'])): ?>
+                <button type="button" class="btn-padrao">Login</button>
+            <?php else: ?>
+                <button id="logout" class="logout-btn">Logout</button>
+            <?php endif; ?>
+        </div>
+
+        <form action="\site-adm-grid\view\components\login.php" method="POST">
             <section>
                 <div class="box-login" id="loginPopup">
                     <label class="label-form" for="username">Login</label>
@@ -53,6 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 </div>
             </section>
         </form>
+
         <section>
             <div class="container">
                 <div class="container-p">
@@ -65,13 +45,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         </span>
                     </h1>
                     <div class="destaque-text">
-                        <p class="destaque-text-p">Cansado de cursos que prometem e não entregam? Aprenda com quem tem
-                            25 anos de credibilidade em formar bons programadores
+                        <p class="destaque-text-p">
+                            Cansado de cursos que prometem e não entregam? Aprenda com quem tem 25 anos de credibilidade
+                            em
+                            formar bons programadores.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
-        <script src="/site-adm-grid\view\assets\js\home.js"></script>
+
+        <script src="/site-adm-grid/view/assets/js/home.js"></script>
     </main>
 </body>

@@ -1,9 +1,11 @@
 @import url("/../site-adm-grid/view/assets/css/reset.css");
-@import url("/../site-adm-grid/view/assets/css/components/content.css");
-@import url("/../site-adm-grid/view/assets/css/components/footer.css");
 @import url("/../site-adm-grid/view/assets/css/components/sidebar.css");
-@import url("/../site-adm-grid/view/assets/css/components/categoria.css");
+@import url("/../site-adm-grid/view/assets/css/components/footer.css");
+@import url("/../site-adm-grid/view/assets/css/components/content.css");
+@import url("/../site-adm-grid/view/assets/css/components/tabela.css");
 @import url("/../site-adm-grid/view/assets/css/components/home.css");
+@import url("/../site-adm-grid/view/assets/css/components/categoria.css");
+@import url("/../site-adm-grid/view/assets/css/components/artigos.css");
 
 body {
   display: grid;

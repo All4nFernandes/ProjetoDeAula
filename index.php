@@ -1,2 +1,3 @@
 <?php
-return header("Location: view/pages/home.php");
+header("Location: view/pages/home.php");
+exit();

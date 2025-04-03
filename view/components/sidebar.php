@@ -7,9 +7,9 @@
             <img class="logo" src="/../site-adm-grid/view/assets/img/Devmedia.jpeg" alt="logo">
 
             <!-- botao para fechar e abrir a sidebar -->
-            <button class="voltar sidebar-voltar">
-                <span class="material-symbols-outlined"> chevron_left </span>
-            </button>
+            <!-- <button class="voltar sidebar-voltar">
+                <span class="material-symbols-outlined"> chevron_left </span> não será utilizado no momento 
+            </button> -->
         </header>
         <nav class="sidebar-nav">
             <ul class="nav-list">
@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../site-adm-grid/view/pages/produtos.php">
+                    <a class="nav-link" href="/../site-adm-grid/view/pages/artigos.php">
                         <span class="nav-icone material-symbols-outlined"> news </span>
                         <span class="nav-label">Artigos</span>
                     </a>
