@@ -2,11 +2,11 @@
 
 require_once __DIR__ . "..\..\config\Database.php";
 
-class CategoriaModel
+class ArtigoModel
 {
 
     protected $conn;
-    private $tabela = "categoria";
+    private $tabela = "artigo";
 
 
     public function __construct()
@@ -45,24 +45,28 @@ class CategoriaModel
         return $stmt->rowCount() > 0;
     }
 
-    public function novaCategoria($nome)
+    public function novoArtigo($titulo,$id_categoria, $conteudo)
     {
-        $query = "INSERT INTO $this->tabela (nome) VALUES (:nome)";
+        $query = "INSERT INTO $this->tabela (titulo, id_categoria, conteudo) VALUES (:titulo, :id_categoria, :conteudo)";
 
         $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":titulo", $titulo);
+        $stmt->bindParam(":id_categoria", $id_categoria);
+        $stmt->bindParam(":conteudo", $conteudo);
         $stmt->execute();
         return $stmt->rowCount() > 0;
     }
 
-    public function editar($id, $nome)
+    public function editar($id, $titulo, $id_categoria, $conteudo)
     {
         $query = "UPDATE $this->tabela
-                  SET nome = :nome WHERE id = :id";
+                  SET titulo = :titulo, id_categoria = :id_categoria, conteudo = :conteudo WHERE id = :id";
 
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
-        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":titulo", $titulo);
+        $stmt->bindParam(":id_categoria", $id_categoria);
+        $stmt->bindParam(":conteudo", $conteudo);
         return $stmt->rowCount() > 0;
     }
 

@@ -41,7 +41,6 @@
         </nav>
     </aside>
 
-    <script src="/../site-adm-grid/view/assets/js/sidebar.js" defer></script>
 </body>
 
 </html>

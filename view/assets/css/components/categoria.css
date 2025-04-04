@@ -1,0 +1,64 @@
+.cadastrar_categoria {
+    background-color: #292929;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cadastrar_categoria form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.cadastrar_categoria label {
+    font-weight: bold;
+    color: #c9f31d;
+    margin-bottom: 5px;
+}
+
+.cadastrar_categoria {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #1c1c1c;
+    color: #fff;
+    outline: none;
+    border: 1px solid #555;
+    transition: border-color 0.3s;
+}
+
+
+.btn-padrao {
+    background-color: #c9f31d;
+    color: #1c1c1c;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-padrao:hover {
+    background-color: #f5e10d;
+    transform: scale(1.05);
+}
+
+.material-symbols-outlined {
+    font-size: 20px;
+    vertical-align: middle;
+}

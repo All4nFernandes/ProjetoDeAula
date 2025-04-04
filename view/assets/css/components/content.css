@@ -5,6 +5,17 @@ main {
   overflow: auto;
   grid-column: 2;
   grid-row: 1;
+   background-image: url("../../../assets/img/plano-de-fundo-home.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  /* height: 100vh;
+  width: 100%; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .title-h1-devmedia {

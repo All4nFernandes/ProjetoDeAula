@@ -24,14 +24,14 @@ $lista = $categoriaModel->listar();
 
 <body>
 
-    <?php include_once __DIR__ . "/../components/sidebar.php"; ?>
+<?php require_once __DIR__ . "../../components/sidebar.php"; ?>
 
     <main>
         <div>
             <h1 class="title-h1-devmedia table-h1">DevMedia</h1>
         </div>
         <div>
-            <a class="link-btn" href="">
+            <a class="link-btn" href="categoria-cadastro.php">
                 <button type="button" class="btn-padrao btn-new">Novo</button>
             </a>
         </div>
