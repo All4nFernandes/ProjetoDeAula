@@ -32,7 +32,7 @@ class CategoriaModel
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetch(PDO::FETCH_OBJ);
     }
 
     public function excluir($id): mixed
@@ -63,6 +63,7 @@ class CategoriaModel
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
         $stmt->bindParam(":nome", $nome);
+        $stmt->execute();
         return $stmt->rowCount() > 0;
     }
 

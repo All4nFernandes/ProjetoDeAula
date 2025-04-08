@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../../config/Database.php";
 require_once __DIR__ . "\..\..\Model\CategoriaModel.php";
-require_once __DIR__ . "../../components/head.php";
+require_once __DIR__ . "..\..\components/head.php";
 
 
 if (isset($_GET["id"])) {
@@ -24,7 +24,7 @@ $lista = $categoriaModel->listar();
 
 <body>
 
-<?php require_once __DIR__ . "../../components/sidebar.php"; ?>
+    <?php require_once __DIR__ . "../../components/sidebar.php"; ?>
 
     <main>
         <div>
