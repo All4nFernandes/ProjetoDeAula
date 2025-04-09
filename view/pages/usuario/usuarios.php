@@ -1,7 +1,8 @@
 <?php
-require_once __DIR__ . "/../../config/Database.php";
-require_once __DIR__ . "\..\..\Model\UsuarioModel.php";
-include_once __DIR__ . "/../components/head.php";
+require_once __DIR__ . "\..\..\..\config\Database.php";
+require_once __DIR__ . "\..\..\..\Model\UsuarioModel.php";
+require_once __DIR__ . "\..\..\components/head.php";
+
 
 $usuariosmodel = new UsuarioModel();
 $usuarios = $usuariosmodel->listar();
@@ -10,7 +11,7 @@ $usuarios = $usuariosmodel->listar();
 
 <body>
 
-    <?php include_once __DIR__ . "/../components/sidebar.php"; ?>
+    <?php include_once __DIR__ . "/../../components/sidebar.php"; ?>
 
     <main>
         <div>

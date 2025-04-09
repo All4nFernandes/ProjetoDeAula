@@ -18,13 +18,23 @@ class ArtigoModel
 
     public function listar()
     {
-        $query = "SELECT * FROM $this->tabela";
+        $query = "
+            SELECT 
+                artigo.id,
+                artigo.titulo,
+                artigo.conteudo,
+                artigo.id_categoria,
+                categoria.nome AS nome_categoria
+            FROM artigo
+            INNER JOIN categoria ON artigo.id_categoria = categoria.id
+        ";
+
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll();
-
-
     }
+
+
 
     public function buscarPorId($id)
     {
@@ -45,7 +55,7 @@ class ArtigoModel
         return $stmt->rowCount() > 0;
     }
 
-    public function novoArtigo($titulo,$id_categoria, $conteudo)
+    public function novoArtigo($titulo, $id_categoria, $conteudo)
     {
         $query = "INSERT INTO $this->tabela (titulo, id_categoria, conteudo) VALUES (:titulo, :id_categoria, :conteudo)";
 

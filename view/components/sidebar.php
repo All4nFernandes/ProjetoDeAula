@@ -20,19 +20,19 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../site-adm-grid/view/pages/categoria.php">
+                    <a class="nav-link" href="/../site-adm-grid/view/pages/categoria/categoria.php">
                         <span class="nav-icone material-symbols-outlined"> category </span>
                         <span class="nav-label">Categoria</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../site-adm-grid/view/pages/artigos.php">
+                    <a class="nav-link" href="/../site-adm-grid/view/pages/artigo/artigos.php">
                         <span class="nav-icone material-symbols-outlined"> news </span>
                         <span class="nav-label">Artigos</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/../site-adm-grid/view/pages/usuarios.php">
+                    <a class="nav-link" href="/../site-adm-grid/view/pages/usuario/usuarios.php">
                         <span class="nav-icone material-symbols-outlined"> person </span>
                         <span class="nav-label">Usuarios</span>
                     </a>

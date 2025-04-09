@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . "/../../config/Database.php";
-require_once __DIR__ . "\..\..\Model\CategoriaModel.php";
-require_once __DIR__ . "..\..\components/head.php";
+require_once __DIR__ . "\..\..\..\config\Database.php";
+require_once __DIR__ . "\..\..\..\Model\CategoriaModel.php";
+require_once __DIR__ . "\..\..\components/head.php";
 
 
 $categoriaModel = new CategoriaModel();
@@ -48,18 +48,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
 
-    <?php require_once __DIR__ . "../../components/sidebar.php"; ?>
+    <?php require_once __DIR__ . "/../../components/sidebar.php"; ?>
 
     <main>
         <section class="form-container-devmedia">
             <form class="form-devmedia" action="categoria-editar.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo $categoria->id ?? ''; ?>">
+                <input type="hidden" name="id" value="<?php echo $categoria->id ?>">
 
                 <h1 class="title-devmedia">Editar Categoria</h1>
 
                 <div class="form-group-devmedia">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" value="<?php echo $categoria->nome ?? ''; ?>" required>
+                    <input type="text" name="nome" value="<?php echo $categoria->nome; ?>" required>
                 </div>
 
                 <button class="btn-devmedia" type="submit">
