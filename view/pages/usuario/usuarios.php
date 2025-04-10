@@ -42,16 +42,6 @@ $usuarios = $usuariosmodel->listar();
                         <td><?php echo $usuario['cpf'] ?></td>
                         <td><?php echo $usuario['telefone'] ?></td>
                         <td>
-                            <!-- METHODS - Get / Post -->
-                            <form action="usuario-visualizar.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
-                                <button class="btn-icon">
-                                    <span class="material-symbols-outlined table">
-                                        visibility
-                                    </span>
-                                </button>
-                            </form>
-
                             <form action="usuario-editar.php" method="GET">
                                 <input type="hidden" name="id" value="<?php echo $filme['id'] ?>">
                                 <button class="btn-icon">
@@ -76,7 +66,7 @@ $usuarios = $usuariosmodel->listar();
             </tbody>
         </table>
     </main>
-
+    <?php require_once __DIR__ . "/../../components/footer.php"; ?>
 </body>
 
 </html>

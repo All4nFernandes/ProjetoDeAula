@@ -57,4 +57,5 @@ require_once __DIR__ . "../../components/head.php"; ?>
 
         <script src="/site-adm-grid/view/assets/js/home.js"></script>
     </main>
+    <?php require_once __DIR__ . "../../components/footer.php"; ?>
 </body>

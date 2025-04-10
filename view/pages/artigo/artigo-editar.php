@@ -1,10 +1,9 @@
 <?php
 require_once __DIR__ . "\..\..\..\config\Database.php";
-require_once __DIR__ . "\..\..\..\Model\CategoriaModel.php";
+require_once __DIR__ . "\..\..\..\Model\ArtigoModel.php";
 require_once __DIR__ . "\..\..\components/head.php";
 
-
-$categoriaModel = new CategoriaModel();
+$artigoModel = new ArtigoModel();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $id = $_POST["id"];
@@ -16,13 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $nome = $_POST["nome"];
 
-        $sucesso = $categoriaModel->editar($id, $nome);
+        $sucesso = $artigoModel->editar($id, $titulo, $id_categoria, $conteudo)
     } else {
 
 
         $nome = $_POST["nome"];
 
-        $sucesso = $categoriaModel->novaCategoria($nome);
+        $sucesso = $artigoModel->novaCategoria($nome);
     }
 
     if ($sucesso) {

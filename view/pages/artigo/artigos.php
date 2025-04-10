@@ -75,6 +75,7 @@ $lista = $ArtigoModel->listar();
             </tbody>
         </table>
     </main>
+    <?php require_once __DIR__ . "/../../components/footer.php"; ?>
 
 </body>
 
