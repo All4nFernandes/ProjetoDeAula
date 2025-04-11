@@ -43,7 +43,7 @@ $usuarios = $usuariosmodel->listar();
                         <td><?php echo $usuario['telefone'] ?></td>
                         <td>
                             <form action="usuario-editar.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $filme['id'] ?>">
+                                <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
                                 <button class="btn-icon">
                                     <span class="material-symbols-outlined table">
                                         edit

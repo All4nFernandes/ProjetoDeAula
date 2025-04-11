@@ -31,7 +31,7 @@ class UsuarioModel
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function excluir($id): mixed
@@ -55,14 +55,17 @@ class UsuarioModel
         return $stmt->rowCount() > 0;
     }
 
-    public function editar($id, $nome)
+    public function editar($id, $nome, $email, $data_nascimento, $cpf, $telefone)
     {
         $query = "UPDATE $this->tabela
-                  SET nome = :nome WHERE id = :id";
-
+                  SET nome = :nome, email = :email, data_nascimento = :data_nascimento, cpf = :cpf, telefone = :telefone WHERE id = :id";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":id", $id);
         $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":data_nascimento", $data_nascimento);
+        $stmt->bindParam(":cpf", $cpf);
+        $stmt->bindParam(":telefone", $telefone);
         $stmt->execute();
         return $stmt->rowCount() > 0;
     }

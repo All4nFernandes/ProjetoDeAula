@@ -38,12 +38,13 @@ class ArtigoModel
 
     public function buscarPorId($id)
     {
-        $query = "SELECT * FROM $this->tabela WHERE id = :id";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":id", $id);
+        $sql = "SELECT * FROM $this->tabela WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetchAll(PDO::FETCH_OBJ); // Retorna como objeto
     }
+
 
     public function excluir($id): mixed
     {
@@ -69,16 +70,19 @@ class ArtigoModel
 
     public function editar($id, $titulo, $id_categoria, $conteudo)
     {
-        $query = "UPDATE $this->tabela
-                  SET titulo = :titulo, id_categoria = :id_categoria, conteudo = :conteudo WHERE id = :id";
+        $sql = "UPDATE $this->tabela
+                SET titulo = :titulo, id_categoria = :id_categoria, conteudo = :conteudo 
+                WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
 
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindParam(":id", $id);
         $stmt->bindParam(":titulo", $titulo);
         $stmt->bindParam(":id_categoria", $id_categoria);
         $stmt->bindParam(":conteudo", $conteudo);
-        return $stmt->rowCount() > 0;
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+
+        return $stmt->execute();
     }
+
 
 
 }

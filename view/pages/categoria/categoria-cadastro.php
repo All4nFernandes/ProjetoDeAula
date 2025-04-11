@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <body>
     <?php
-    require_once __DIR__ . "../../components/sidebar.php";
+    require_once __DIR__ . "/../../components/sidebar.php";
     ?>
     <main>
         <h1 class="title-h1-devmedia table-h1">Cadastrar nova categoria</h1>
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </form>
         </section>
     </main>
-    <?php require_once __DIR__ . "../../components/footer.php"; ?>
+    <?php require_once __DIR__ . "/../../components/footer.php"; ?>
 </body>
 
 </html>
