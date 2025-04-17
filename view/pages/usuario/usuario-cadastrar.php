@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "\..\..\..\config\Database.php";
 require_once __DIR__ . "\..\..\..\Model\UsuarioModel.php";
-require_once __DIR__ . "\..\..\components/head.php";
+require_once __DIR__ . "\..\..\components\head.php";
 
 $usuarioModel = new UsuarioModel();
 $usuario = null;
@@ -14,22 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $cpf = $_POST["cpf"];
     $telefone = $_POST["telefone"];
 
-    $sucesso = $usuarioModel->editar($id, $nome, $email, $data_nascimento, $cpf, $telefone);
+    $sucesso = $usuarioModel->novoUsuario($nome, $email, $data_nascimento, $cpf, $telefone);
 
     if ($sucesso) {
         return header("Location: usuarios.php?mensagem=sucesso");
     } else {
         return header("Location: usuarios.php?mensagem=erro");
     }
-} else if ($_SERVER["REQUEST_METHOD"] === "GET" && !empty($_GET['id'])) {
-    $usuariosEncontrados = $usuarioModel->buscarPorId($_GET['id']);
-    if (is_array($usuariosEncontrados) && count($usuariosEncontrados) > 0) {
-        $usuario = $usuariosEncontrados[0];
-    } else {
-        return header("Location: usuarios.php?mensagem=nao_encontrado");
-    }
-} else {
-    return header("Location: usuarios.php?mensagem=acesso_invalido");
 }
 ?>
 
@@ -38,34 +29,32 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <main class="main-editar">
         <section class="form-container-devmedia">
-            <form class="form-devmedia" action="usuario-editar.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo $usuario->id; ?>">
-
-                <h1 class="title-devmedia">Editar Usuário</h1>
+            <form class="form-devmedia" action="" method="POST">
+                <h1 class="title-devmedia">Cadastrar Usuario</h1>
 
                 <div class="form-group-devmedia">
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" value="<?php echo $usuario->nome; ?>" required>
+                    <input type="text" name="nome" required>
                 </div>
 
                 <div class="form-group-devmedia">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" value="<?php echo $usuario->email; ?>" required>
+                    <input type="email" name="email" required>
                 </div>
 
                 <div class="form-group-devmedia">
                     <label for="data_nascimento">Data de Nascimento:</label>
-                    <input type="date" name="data_nascimento" value="<?php echo $usuario->data_nascimento; ?>" required>
+                    <input type="date" name="data_nascimento" required>
                 </div>
 
                 <div class="form-group-devmedia">
                     <label for="cpf">CPF:</label>
-                    <input type="text" name="cpf" value="<?php echo $usuario->cpf; ?>" required>
+                    <input type="text" name="cpf" required maxlength="11">
                 </div>
 
                 <div class="form-group-devmedia">
                     <label for="telefone">Telefone:</label>
-                    <input type="text" name="telefone" value="<?php echo $usuario->telefone; ?>" required>
+                    <input type="text" name="telefone" required maxlength="11">
                 </div>
 
                 <button class="btn-devmedia" type="submit">

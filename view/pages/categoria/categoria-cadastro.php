@@ -22,22 +22,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php
     require_once __DIR__ . "/../../components/sidebar.php";
     ?>
-    <main>
-        <h1 class="title-h1-devmedia table-h1">Cadastrar nova categoria</h1>
-        <section class="cadastrar_categoria">
-            <form action="" method="POST">
-                <div>
-                    <label for="nome">Categoria</label>
+    <main class="main-editar">
+        <h1 class="title-devmedia">Cadastrar nova categoria</h1>
+        <section class="form-container-devmedia">
+            <form class="form-devmedia" action="" method="POST">
+                <div class="form-group-devmedia"">
+                    <label for=" nome">Categoria</label>
                     <input type="text" name="nome" required>
                 </div>
-                <button class="btn-padrao" type="submit">
+                <button class="btn-devmedia" type="submit">
                     <span class="material-symbols-outlined">save</span>
                 </button>
             </form>
 
             <!-- Voltar para a listagem -->
-            <form action="categoria.php" method="GET">
-                <button class="btn-padrao" type="submit">
+            <form class="form-devmedia" action="categoria.php" method="GET">
+                <button class="btn-devmedia" type="submit">
                     <span class="material-symbols-outlined  ">arrow_back</span>
                 </button>
             </form>

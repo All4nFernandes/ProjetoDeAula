@@ -15,10 +15,10 @@ $usuarios = $usuariosmodel->listar();
 
     <main>
         <div>
-            <h1 class="title-h1-devmedia table-h1">DevMedia</h1>
+            <h1 class="title-h1-devmedia table-h1">Usuarios</h1>
         </div>
         <div>
-            <a class="link-btn" href="">
+            <a class="link-btn" href="usuario-cadastrar.php">
                 <button type="button" class="btn-padrao btn-new">Novo</button>
             </a>
         </div>
@@ -52,7 +52,7 @@ $usuarios = $usuariosmodel->listar();
                             </form>
 
                             <form action="usuario-excluir.php" method="POST">
-                                <input type="hidden" name="id" value="<?php echo $filme['id'] ?>">
+                                <input type="hidden" name="id" value="<?php echo $usuario['id'] ?>">
                                 <button class="btn-icon"
                                     onclick="return confirm('Tem certeza que deseja excluir o usuario?')">
                                     <span class="material-symbols-outlined table">

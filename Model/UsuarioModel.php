@@ -45,12 +45,16 @@ class UsuarioModel
     }
 
 
-    public function novoUsuario($nome)
+    public function novoUsuario($nome, $email, $data_nascimento, $cpf, $telefone)
     {
-        $query = "INSERT INTO $this->tabela (nome) VALUES (:nome)";
+        $query = "INSERT INTO $this->tabela (nome, email, data_nascimento, cpf, telefone) VALUES (:nome, :email, :data_nascimento, :cpf, :telefone)";
 
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":data_nascimento", $data_nascimento);
+        $stmt->bindParam(":cpf", $cpf);
+        $stmt->bindParam(":telefone", $telefone);
         $stmt->execute();
         return $stmt->rowCount() > 0;
     }

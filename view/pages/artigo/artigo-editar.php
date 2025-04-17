@@ -41,48 +41,47 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <?php require_once __DIR__ . "/../../components/sidebar.php"; ?>
 
-    <main class="main-artigo">
+    <main class="main-editar">
         <section class="form-container-devmedia">
-        <form class="form-devmedia" action="artigo-editar.php" method="POST">
-    <input type="hidden" name="id" value="<?php echo $artigo->id; ?>">
+            <form class="form-devmedia" action="artigo-editar.php" method="POST">
+                <input type="hidden" name="id" value="<?php echo $artigo->id; ?>">
 
-    <h1 class="title-devmedia">Editar Artigo</h1>
+                <h1 class="title-devmedia">Editar Artigo</h1>
 
-    <div class="form-group-devmedia">
-        <label for="titulo">Título:</label>
-        <input type="text" name="titulo" value="<?php echo $artigo->titulo; ?>" required>
-    </div>
+                <div class="form-group-devmedia">
+                    <label for="titulo">Título:</label>
+                    <input type="text" name="titulo" value="<?php echo $artigo->titulo; ?>" required>
+                </div>
 
-    <div class="form-group-devmedia">
-        <label for="id_categoria">Categoria:</label>
-        <select name="id_categoria" required>
-            <option value="">Selecione uma categoria</option>
-            <?php foreach ($categorias as $categoria): ?>
-                <option value="<?php echo $categoria['id']; ?>" 
-                    <?php if ($artigo->id_categoria == $categoria['id']) echo 'selected'; ?>>
-                    <?php echo $categoria['nome']; ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
-    </div>
+                <div class="form-group-devmedia">
+                    <label for="id_categoria">Categoria:</label>
+                    <select name="id_categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <?php foreach ($categorias as $categoria): ?>
+                            <option value="<?php echo $categoria['id']; ?>" 
+                                <?php if ($artigo->id_categoria == $categoria['id']) echo 'selected'; ?>>
+                                <?php echo $categoria['nome']; ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
 
-    <div class="form-group-devmedia">
-        <label for="conteudo">Conteúdo:</label>
-        <textarea name="conteudo" required><?php echo $artigo->conteudo; ?></textarea>
-    </div>
+                <div class="form-group-devmedia">
+                    <label for="conteudo">Conteúdo:</label>
+                    <textarea name="conteudo" required><?php echo $artigo->conteudo; ?></textarea>
+                </div>
 
-    <button class="btn-devmedia" type="submit">
-        <span class="material-symbols-outlined">save</span>
-        Salvar
-    </button>
-</form>
-
-<form class="form-devmedia" action="artigos.php" method="GET">
-    <button class="btn-devmedia" type="submit">
-        <span class="material-symbols-outlined">arrow_back</span>
-        Voltar
-    </button>
-</form>
+                <button class="btn-devmedia" type="submit">
+                    <span class="material-symbols-outlined">save</span>
+                    Salvar
+                </button>
+            </form>
+            <form class="form-devmedia" action="artigos.php" method="GET">
+                <button class="btn-devmedia" type="submit">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                    Voltar
+                </button>
+            </form>
 
         </section>
     </main>

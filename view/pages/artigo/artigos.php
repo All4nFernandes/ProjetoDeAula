@@ -28,7 +28,7 @@ $lista = $ArtigoModel->listar();
 
     <main>
         <div>
-            <h1 class="title-h1-devmedia table-h1">DevMedia</h1>
+            <h1 class="title-h1-devmedia table-h1">Artigos</h1>
         </div>
         <div>
             <a class="link-btn" href="Artigo-cadastro.php">
