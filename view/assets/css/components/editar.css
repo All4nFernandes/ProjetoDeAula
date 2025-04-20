@@ -1,0 +1,85 @@
+.main-editar {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-container-devmedia {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(201, 243, 29, 0.3);
+  width: 100%;
+  max-width: 700px;
+}
+
+.title-devmedia {
+  color: #c9f31d;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-devmedia {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group-devmedia label {
+  color: #c9f31d;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-group-devmedia input[type="text"],
+.form-group-devmedia input[type="email"],
+.form-group-devmedia input[type="date"],
+.form-group-devmedia select,
+.form-group-devmedia textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #c9f31d;
+  background-color: #2a2a2a;
+  color: white;
+  resize: vertical;
+}
+
+.form-group-devmedia textarea {
+  min-height: 200px;
+}
+
+.form-group-devmedia input:focus,
+.form-group-devmedia select:focus,
+.form-group-devmedia textarea:focus {
+  outline: none;
+  border-color: #e4ff6d;
+  background-color: #333;
+}
+
+.btn-devmedia {
+  background-color: #c9f31d;
+  border: none;
+  color: #121212;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-devmedia:hover {
+  background-color: #b3db1a;
+}
+
+.material-symbols-outlined {
+  font-size: 20px;
+}

@@ -1,26 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Playfair Display", serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#f1faff, #cbe4ff);
+}
+
 aside {
-  width: 200px;
-  height: 100vh;
-  background-color: rgb(136, 136, 235);
-  /* position: fixed;
-    left: 0; */
   grid-column: 1;
   grid-row: 1 / 4;
+  width: 200px;
+  height: 100vh;
+}
 
-  button {
-    visibility: hidden;
-  }
+.sidebar {
+  width: 100%;
+  position: sticky;
+  background: black;
+  /* border-radius: 16px; */
+  height: calc(100vh - 1px);
+  transition: 0.5s ease;
+}
+
+.sidebar.collapsed {
+  width: 85px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+
+.sidebar-header .logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.sidebar-nav .nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar-nav .nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0px 10px;
+  transform: translateY(15px);
+  transition: 0.5s ease;
+}
+
+.sidebar.collapsed .sidebar-nav {
+  transform: translateY(65px);
+}
+
+.sidebar-header .voltar {
+  position: absolute;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: black;
+  border-radius: 15px;
+  background-color: #fff;
+  transition: 0.5 ease;
+}
+
+.sidebar-header .voltar span {
+  transition: 0.5s ease;
+}
+
+.sidebar.collapsed .sidebar-header .voltar span {
+  transform: rotate(180deg);
+}
+
+.sidebar.collapsed .sidebar-header .voltar {
+  transform: translate(-4px, 65px);
+}
+
+.sidebar-header .voltar:hover {
+  background-color: #dde4fb;
+}
+
+.sidebar-header .voltar span {
+  font-size: 1.75rem;
+}
+
+.sidebar-nav .nav-link {
+  color: #fff;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 15px 20px;
+  transition: 0.5s ease;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.sidebar-nav .nav-link:hover {
+  color: #151a2d;
+  background-color: #fff;
+}
+
+.sidebar-nav .nav-link .nav-label {
+  transition: opacity 0.5s ease;
+}
+
+.sidebar.collapsed .sidebar-nav .nav-link .nav-label {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 490px) {
-  aside {
-    visibility: hidden;
-
-    button {
-      visibility: visible;
-      /* position: fixed;
-            left: 10px;
-            top: 13px; */
-    }
+  .sidebar.collapsed {
+    display: block;
   }
 }

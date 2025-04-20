@@ -1,0 +1,67 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table thead th {
+  background-color: #111;
+  color: #c9f31d;
+  padding: 15px;
+  text-align: left;
+  font-size: 18px;
+  border-bottom: 3px solid #c9f31d;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #333;
+  transition: background 0.3s ease-in-out;
+}
+
+.table tbody tr:hover {
+  background-color: #333;
+}
+
+.table tbody td {
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+}
+.reset-form {
+  height: 0px;
+  width: 0px;
+  margin: 0px;
+  padding: 5px;
+  gap: 5px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-icon span {
+  color: #c9f31d;
+}
+
+.btn-icon:hover span {
+  color: #fff;
+}
+
+.botao:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+.material-symbols-outlined table {
+  vertical-align: middle;
+  font-size: 20px;
+}
